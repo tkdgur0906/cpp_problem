@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 int main() {
-	char name[100];
-	char phone_number[100];
-	cin >> name >> phone_number;
-	cout << name << endl;
-	cout << phone_number << endl;
+	int num;
+	cin >> num;
+	for (int i = 1; i <= 9; i++) {
+		cout << num << " * " << i << " = " << num * i << endl;
+	}
 	return 0;
 }
