@@ -1,15 +1,35 @@
 #include <iostream>
 using namespace std;
-int main() {
-	int sell_price;
-	while (true) {
-		cout << "판매 금액을 만원 단위로 입력(-1 to end): ";
-		cin >> sell_price;
-		if (sell_price == -1) {
-			cout << "프로그램을 종료합니다" << endl;
-			break;
-		}
-		cout << "이번 달 급여: " << 50 + sell_price * 0.12 << "만원" << endl;
-	}
-	return 0;
+
+void swap(int *num1, int *num2) {
+	int temp = *num1;
+	*num1 = *num2;
+	*num2 = temp;
 }
+void swap(char *ch1, char *ch2) {
+	char temp = *ch1;
+	*ch1 = *ch2;
+	*ch2 = temp;
+}
+void swap(double *db1, double *db2) {
+	double temp = *db1;
+	*db1 = *db2;
+	*db2 = temp;
+}
+int main() {
+	int num1 = 20, num2 = 30;
+	swap(&num1, &num2);
+	cout << num1 << ' ' << num2 << endl;
+
+	char ch1 = 'A', ch2 = 'Z';
+	swap(&ch1, &ch2);
+	cout << ch1 << ' ' << ch2 << endl;
+
+	double db1 = 1.111, db2 = 5.555;
+	swap(&db1, &db2);
+	cout << db1 << ' ' << db2 << endl;
+}
+
+
+
+
